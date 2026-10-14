@@ -1,0 +1,12 @@
+/* ==== Definimos varibles de colores y fuentes para la visualización ===== */
+:root {
+    --azulmain: rgb(4, 66, 124);
+    --lowblue: rgb(51, 159, 231); 
+    --negro: rgba(8, 5, 14, 0.952);
+    --blanco: rgb(241, 245, 252);
+    --verde: rgb(3, 82, 85); 
+    --morado: rgb(73, 4, 105);
+    --fuente-titulos: 'Copperplate', fantasy;
+    --fuente-parrafos: 'Verdana', Sans-serif;
+    --fuente-decorativa: 'Brush Script MT', cursive;
+}
