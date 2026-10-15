@@ -1,3 +1,4 @@
+
 :root {
     --azulmain: rgb(4, 66, 124);
     --lowblue: rgb(51, 159, 231); 
@@ -152,6 +153,10 @@ body {
     .articulos {
         grid-template-columns: 1fr;
     }
+
+    .imginfSomos {
+        flex-direction: column;
+    }
 }
 
 /* seccion quienes somos*/
@@ -261,208 +266,153 @@ body {
     line-height: 1.4;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.abierto {
-  background-attachment: fixed;
-  background-color: rgb(181, 238, 181);
-  color: rgb(4, 85, 4);
+ 
+/* ===== Barra de navegación (index y contactenos) ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    padding: 14px 20px;
+    background-color: var(--azulmain);
+    font-family: var(--fuente-parrafos);
+    font-size: 0; /* oculta los separadores "|" del HTML */
 }
-
-.cerrado {
-  background-attachment: fixed;
-  background-color: rgb(235, 198, 198);
-  color: rgb(78, 5, 5);
+ 
+nav a {
+    color: var(--blanco);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+ 
+nav a:hover {
+    color: var(--lowblue);
+}
+ 
+/* ===== Pie de página (index y contactenos) ===== */
+footer {
+    padding: 25px 20px;
+    background-color: var(--azulmain);
+    color: var(--blanco);
+    font-family: var(--fuente-parrafos);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+}
+ 
+footer address {
+    font-style: normal;
+    margin-bottom: 6px;
+}
+ 
+/* ===== Página Contáctanos ===== */
+body > header {
+    padding: 40px 20px 10px;
+    text-align: center;
+}
+ 
+body > header h1 {
+    color: var(--azulmain);
+    font-family: var(--fuente-titulos);
+    font-size: 2.3rem;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+ 
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0 40px;
+    color: var(--negro);
+    font-family: var(--fuente-parrafos);
+}
+ 
+main > section {
+    margin-bottom: 25px;
+    padding: 25px;
+    border-left: 5px solid var(--lowblue);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+main > section:hover {
+    background-color: var(--blanco);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(4, 66, 124, 0.15);
+}
+ 
+main h2 {
+    margin-bottom: 12px;
+    color: var(--azulmain);
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+}
+ 
+main p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+ 
+main label {
+    color: var(--azulmain);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+ 
+main input,
+main textarea {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid var(--lowblue);
+    border-radius: 6px;
+    background-color: white;
+    color: var(--negro);
+    font-family: var(--fuente-parrafos);
+    font-size: 0.9rem;
+}
+ 
+main textarea {
+    resize: vertical;
+}
+ 
+main input:focus,
+main textarea:focus {
+    outline: none;
+    border-color: var(--azulmain);
+    box-shadow: 0 0 0 3px rgba(51, 159, 231, 0.3);
+}
+ 
+main button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--azulmain);
+    color: var(--blanco);
+    font-family: var(--fuente-parrafos);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+ 
+main button:hover {
+    background-color: var(--lowblue);
+    transform: translateY(-2px);
+}
+ 
+@media (max-width: 650px) {
+    body > header h1 {
+        font-size: 1.8rem;
+    }
+ 
+    main {
+        width: 92%;
+    }
 }
