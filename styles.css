@@ -9,6 +9,11 @@
     --fuente-parrafos: 'Verdana', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* evita que el menú tape el título de cada sección */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -268,6 +273,10 @@ body {
  
 /* ===== Barra de navegación (index y contactenos) ===== */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
