@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <section class="quienesSomos" id="quienessomos">
+        <section class="quienesSomos" id="quienesSomos">
             <div class="contenedorSomos">
 
                 <div class="headerSomos">
@@ -76,9 +76,68 @@
         </section>
 
         <section class="contacto" id="contacto">
-            <div class="">
+            <div class="contenedorContacto">
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                En este formulario podrás enviarnos todo tipo de petición,
+                queja, reclamo o sugerencia diligenciando todos los campos
+                del formato.
+            </p>
+
+            <div class="infoContacto">
+                <p><strong>Correo:</strong> contacto@jakfatechnology.com</p>
+                <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+                <p><strong>Dirección:</strong> Carrera 7 # 50-22 Bogotá, Colombia</p>
+            </div>
+
+            <h3>Envíanos un mensaje</h3>
+
+            <form id="formularioContacto">
+
+                    <div>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="correo">Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="asunto">Asunto:</label><br>
+                        <input type="text" id="asunto" name="asunto">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            cols="40"
+                            required>
+                        </textarea>
+                    </div>
+
+                    <br>
+
+                    <button type="submit">
+                        Enviar mensaje
+                    </button>
+
+                </form>
 
             </div>
+            
         </section>
 
     </div>
@@ -89,10 +148,27 @@
         </address>
         <small>
             © 2026 JAKFA Tecnology. Blog/Ecommerce Tecnología.
+            <p>contacto@jakfatechnology.com</p>
         </small>
     </footer>
 
     <script src="app.js" defer></script>
 
+    <script>
+    const formulario = document.getElementById("formularioContacto");
+
+    formulario.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert("Formulario enviado correctamente");
+
+        formulario.reset();
+
+        document.getElementById("nombre").focus();
+
+    });
+
+</script>
 </body>
 </html>
